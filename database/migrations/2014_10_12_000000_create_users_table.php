@@ -25,14 +25,13 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->string('usertype',25);
-            $table->tinyInteger('block',4);
-            $table->tinyInteger('sendEmail',4)->nullable();
+            $table->integer('block')->length(4)->nullable();
+            $table->integer('sendEmail')->length(4)->nullable();
             $table->string('activation',100);
             $table->text('params')->nullable();
             $table->timestamp('lastResetTime')->nullable();
-            $table->int('resetCount');
-            $table->timestamp('created_at');
-            $table->timestamp('updated_at');
+            $table->integer('resetCount');
+            
 
 
         });

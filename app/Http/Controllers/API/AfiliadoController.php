@@ -38,7 +38,7 @@ class AfiliadoController extends Controller
 
          return (new AfiliadoResource(Afiliado::create($request->all())))
             ->additional([
-                'msg'=> 'Afiliado creado correctamente'
+                'msg'=> 'Afiliado registrado correctamente'
             ]);
     }
 
@@ -100,7 +100,7 @@ class AfiliadoController extends Controller
         ], 200); */
         return (new  AfiliadoResource($afiliado))
             ->additional([
-                "msg" => "Afiliado ".$afiliado->id." eliminado corredctamente"
+                "msg" => "Afiliado ".$afiliado->id." eliminado correctamente"
             ]);
     }
 
